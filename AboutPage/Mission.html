@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bouldering Club</title>
+<link rel="stylesheet" href="../website.css">
+</head>
+<body>
+  <!--navigation-->
+    <nav class="navbar">
+        <img src="../img/logo.jpeg" width="50" height="50" alt="Bouldering Club logo">
+        <div class="logo">Bouldering Club</div>
+      
+        <div class="menu-toggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      
+        <ul class="nav-links">
+          <li><a href="../website.html">Home</a></li>
+      
+          <!-- Dropdown: About -->
+          <li class="dropdown">
+            <a href="#">About ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="Mission.html">Mission</a></li>
+              <li><a href="OurTeam.html">Our Team</a></li>
+            </ul>
+          </li>
+      
+          <!-- Dropdown: Events -->
+          <li class="dropdown">
+            <a href="#">Events ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="../EventsPage/Meetups.html">Meetups</a></li>
+              <li><a href="../EventsPage/Competitions.html">Competitions</a></li>
+            </ul>
+          </li>
+      
+          <li><a href="../Tracking/tracking.html">Tracking</a></li>
+          <li><a href="../Login/login.html" id="login-btn">Login</a></li>
+        </ul>
+      </nav>
+
+
+      <!--content-->
+      <section class="section">
+      <h1>Our Mission</h1>
+      <p>Our mission is to introduce people to the exciting sport and lifestyle of climbing. 
+        Beyond just a physical challenge, 
+        climbing is a mental puzzle, bringing us stimulation, and personal growth. 
+        We're passionate about sharing that love and supporting everyone as 
+        they push their limits and reach new heights—both on and off the wall.</p>
+      </section>
+      <hr>
+
+      <section class="section">
+        <h1>Community</h1>
+        <p>
+          We hope to enrich the Edmonton climbing scene by making climbing accessible with a supportive environment and engaging activities. 
+          In time, we aspire to expand beyond Ainlay into other schools, and eventually 
+          organize outdoor climbing trips that inspire adventure and connect students to the beauty of climbing in nature. 
+          Ultimately, our aim is to create a tight-knit community that helps students grow in climbing, but also thrive in life through challenge, discovery and cooperation.
+        </p>
+      </section>
+      <hr>
+
+
+
+
+
+      <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+      
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      
+        dropdowns.forEach(dropdown => {
+          dropdown.querySelector('a').addEventListener('click', e => {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+          });
+        });
+    </script>
+</body>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bouldering Club</title>
+<link rel="stylesheet" href="../website.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="../img/logo.jpeg" width="50" height="50" alt="Bouldering Club logo">
+        <div class="logo">Bouldering Club</div>
+      
+        <div class="menu-toggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      
+        <ul class="nav-links">
+          <li><a href="../website.html">Home</a></li>
+      
+          <!-- Dropdown: About -->
+          <li class="dropdown">
+            <a href="#">About ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="../AboutPage/Mission.html">Mission</a></li>
+              <li><a href="../AboutPage/OurTeam.html">Our Team</a></li>
+            </ul>
+          </li>
+      
+          <!-- Dropdown: Events -->
+          <li class="dropdown">
+            <a href="#">Events ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="Meetups.html">Meetups</a></li>
+              <li><a href="Competitions.html">Competitions</a></li>
+            </ul>
+          </li>
+      
+          <li><a href="../Tracking/tracking.html">Tracking</a></li>
+          <li><a href="../Login/login.html" id="login-btn">Login</a></li>
+        </ul>
+      </nav>
+
+
+      <!--Content-->
+      <section class="section">
+      <h1>Competitions</h1>
+      <p>We plan to hold competitions with small prizes monthly. Every three months, we will be holding a competition with a medium prize(50 ish dollars). At the
+        end of the year, we will be holding a large competition with a raffle prize of climbing shoes worth over 200 dollars and other prizes for the winners.
+        all competitions will be cost free to enter and open to all members of the club.<br><br>
+        More information will be released in the future. The first competition will be held sometime near the end of October.
+      </p>
+      </section>
+      <hr>
+
+
+      <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+      
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      
+        dropdowns.forEach(dropdown => {
+          dropdown.querySelector('a').addEventListener('click', e => {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+          });
+        });
+    </script>
+</body>
