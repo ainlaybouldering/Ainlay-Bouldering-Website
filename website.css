@@ -164,10 +164,6 @@
   }
   
   /* Mobile styles */
-  @media (max-width: 768px) {
-  
-
-  }
 
 
 
@@ -222,6 +218,16 @@ figure>img {
   color: #fff;
   text-align: center;
   z-index: 1;
+
+  @media (max-width: 600px) {
+    .hero {
+      height: 40vh;
+      min-height: 200px;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: scroll; /* Prevents issues on mobile */
+    }
+  }
 }
 
 .hero::before {
@@ -282,7 +288,28 @@ figure>img {
   color: #fff;
   text-align: center;
   z-index: 1;
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .competitions-hero {
+      height: 40vh;
+      min-height: 200px;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: scroll; /* Prevents issues on mobile */
+    }
+  }
+
+
 }
+
 
 
 .competitions-hero::before {
@@ -308,6 +335,25 @@ figure>img {
   color: #fff;
   text-align: center;
   z-index: 1;
+
+
+  @media (max-width: 600px) {
+    .meetups-hero {
+      height: 40vh;
+      min-height: 200px;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: scroll; /* Prevents issues on mobile */
+    }
+  }
+}
+
+.meetups-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45); /* dark overlay for readability */
+  z-index: 2;
 }
 
 
