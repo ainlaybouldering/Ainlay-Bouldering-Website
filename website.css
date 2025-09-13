@@ -219,16 +219,18 @@ figure>img {
   text-align: center;
   z-index: 1;
 
-  @media (max-width: 600px) {
-    .hero {
-      height: 40vh;
-      min-height: 200px;
-      background-position: center center;
-      background-size: cover;
-      background-attachment: scroll; /* Prevents issues on mobile */
-    }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 40vh;
+    min-height: 200px;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll; /* Prevents issues on mobile */
   }
 }
+
 
 .hero::before {
   content: "";
@@ -296,18 +298,22 @@ figure>img {
   .hero-content p {
     font-size: 1rem;
   }
+}
 
-  @media (max-width: 600px) {
-    .competitions-hero {
-      height: 40vh;
-      min-height: 200px;
-      background-position: center center;
-      background-size: cover;
-      background-attachment: scroll; /* Prevents issues on mobile */
-    }
+@media (max-width: 600px) {
+  .competitions-hero {
+    height: 40vh;
+    min-height: 200px;
+    background-position: top center; /* Try top center for better focus */
+    background-size: cover;
+    background-attachment: scroll;
   }
-
-
+  .competitions-hero .hero-content h1 {
+    font-size: 2rem;
+  }
+  .competitions-hero .hero-content p {
+    font-size: 1rem;
+  }
 }
 
 
@@ -335,16 +341,15 @@ figure>img {
   color: #fff;
   text-align: center;
   z-index: 1;
+}
 
-
-  @media (max-width: 600px) {
-    .meetups-hero {
-      height: 40vh;
-      min-height: 200px;
-      background-position: center center;
-      background-size: cover;
-      background-attachment: scroll; /* Prevents issues on mobile */
-    }
+@media (max-width: 600px) {
+  .meetups-hero {
+    height: 40vh;
+    min-height: 200px;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll; /* Prevents issues on mobile */
   }
 }
 
