@@ -6,6 +6,7 @@
 <title>Bouldering Club</title>
 <link rel="stylesheet" href="../website.css">
 </head>
+
 <body>
 <nav class="navbar">
 <img src="../img/logo.jpeg" width="50" height="50" alt="Bouldering Club logo">
@@ -24,8 +25,8 @@
 <li class="dropdown">
 <a href="#">About ▾</a>
 <ul class="dropdown-content">
-<li><a href="../about-pages/Mission.html">Mission</a></li>
-<li><a href="../about-pages/OurTeam.html">Our Team</a></li>
+<li><a href="Mission.html">Mission</a></li>
+<li><a href="OurTeam.html">Our Team</a></li>
 </ul>
 </li>
 
@@ -33,8 +34,8 @@
 <li class="dropdown">
 <a href="#">Events ▾</a>
 <ul class="dropdown-content">
-<li><a href="Meetups.html">Meetups</a></li>
-<li><a href="Competitions.html">Competitions</a></li>
+<li><a href="../events-pages/Meetups.html">Meetups</a></li>
+<li><a href="../events-pages/Competitions.html">Competitions</a></li>
 </ul>
 </li>
 
@@ -43,21 +44,9 @@
 </ul>
 </nav>
 
+    <h2>This will be releasing along with the tracking functions!</h3>
 
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const dropdowns = document.querySelectorAll('.dropdown');
-  
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  
-    dropdowns.forEach(dropdown => {
-      dropdown.querySelector('a').addEventListener('click', e => {
-        e.preventDefault();
-        dropdown.classList.toggle('active');
-      });
-    });
-</script>
+  </nav>
+
 </body>
+</html>

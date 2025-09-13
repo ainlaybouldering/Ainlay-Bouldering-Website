@@ -59,8 +59,16 @@
     h1, h2 {
     margin-bottom: 1rem;
     }
+    
     p {
         margin: 1rem;
+    }
+
+    hr {
+        margin: 2rem auto;
+        border: 0;
+        border-top: 1px solid #ccc;
+        width: 80%;
     }
     
     /* Responsive Design */
@@ -173,4 +181,25 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     display: inline-block;
+}
+
+figure>img {
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.navbar>img {
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.centered-image {
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
