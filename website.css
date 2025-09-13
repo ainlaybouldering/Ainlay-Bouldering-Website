@@ -225,8 +225,8 @@ figure>img {
   .hero {
     height: 40vh;
     min-height: 200px;
-    background-position: center center;
-    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
     background-attachment: scroll; /* Prevents issues on mobile */
   }
 }
@@ -304,15 +304,10 @@ figure>img {
   .competitions-hero {
     height: 40vh;
     min-height: 200px;
-    background-position: top center; /* Try top center for better focus */
-    background-size: cover;
-    background-attachment: scroll;
-  }
-  .competitions-hero .hero-content h1 {
-    font-size: 2rem;
-  }
-  .competitions-hero .hero-content p {
-    font-size: 1rem;
+    background-position: top center; /* focus on the top of the image */
+    background-size: contain;        /* prevent over-zooming */
+    background-repeat: no-repeat;    /* avoid tiling */
+    background-attachment: scroll;   /* iOS fix */
   }
 }
 
@@ -347,8 +342,8 @@ figure>img {
   .meetups-hero {
     height: 40vh;
     min-height: 200px;
-    background-position: center center;
-    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
     background-attachment: scroll; /* Prevents issues on mobile */
   }
 }
