@@ -10,20 +10,20 @@ const firebaseConfig = {
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     
-    const loginBtn = document.getElementById("login-btn");
+    const LoginBtn = document.getElementById("Login-btn");
     
     // Login with Google
-    loginBtn.addEventListener("click", () => {
-    if (loginBtn.innerText === "Login") {
+    LoginBtn.addEventListener("click", () => {
+    if (LoginBtn.innerText === "Login") {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider)
     .then(result => {
-    loginBtn.innerText = "Logout";
+    LoginBtn.innerText = "Logout";
     })
     .catch(error => console.error(error));
     } else {
     auth.signOut().then(() => {
-    loginBtn.innerText = "Login";
+    LoginBtn.innerText = "Login";
     });
     }
     });
