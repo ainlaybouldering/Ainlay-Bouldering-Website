@@ -34,8 +34,11 @@ async function checkDocumentExists(collectionName, documentName) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const repoName = "your-repo-name";
-    const basePath = window.location.hostname === "localhost"   
+    const repoName = "Ainlay-Bouldering-Website";
+    const basePath = window.location.hostname === "localhost" || window.location.hostname === ""
+  ? "" 
+  : `/${repoName}`;
+       
 
     fetch(`${basePath}/shared-elements/navbar.html`)
     .then(response => response.text())
