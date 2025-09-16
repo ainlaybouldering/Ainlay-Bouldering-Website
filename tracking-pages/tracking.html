@@ -8,59 +8,9 @@
 <script type="module" src="../dist/main.js" defer></script>
 </head>
 <body>
-<nav class="navbar">
-<img src="../img/logo.jpeg" width="50" height="50" alt="Bouldering Club logo">
-<div class="logo">Bouldering Club</div>
-
-<div class="menu-toggle" aria-label="Toggle menu">
-<span class="bar"></span>
-<span class="bar"></span>
-<span class="bar"></span>
-</div>
-
-<ul class="nav-links">
-<li><a href="../index.html">Home</a></li>
-
-<!-- Dropdown: About -->
-<li class="dropdown">
-<a href="#">About ▾</a>
-<ul class="dropdown-content">
-    <li><a href="../about-pages/our-mission.html">Mission</a></li>
-    <li><a href="../about-pages/our-team.html">Our Team</a></li>
-</ul>
-</li>
-
-<!-- Dropdown: Events -->
-<li class="dropdown">
-<a href="#">Events ▾</a>
-<ul class="dropdown-content">
-    <li><a href="../events-pages/meet-ups.html">Meetups</a></li>
-    <li><a href="../events-pages/competitions-info.html">Competitions</a></li>
-</ul>
-</li>
-
-<li><a href="#">Tracking</a></li>
-<button class = "Login-btn" id = "Login-btn">Sign in</button>
-</ul>
-</nav>
+<div id="includedContent"></div>
 
 <!--Content-->
 <h2>We will be adding a section to track your hardest climbs here. Keep your eyes peeled &#128064;&#128064;</h2>
 
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const dropdowns = document.querySelectorAll('.dropdown');
-  
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  
-    dropdowns.forEach(dropdown => {
-      dropdown.querySelector('a').addEventListener('click', e => {
-        e.preventDefault();
-        dropdown.classList.toggle('active');
-      });
-    });
-</script>
 </body>

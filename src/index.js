@@ -30,8 +30,43 @@ async function checkDocumentExists(collectionName, documentName) {
     }
 }
 
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("Login-btn").addEventListener("click", () => {
+
+    fetch("/shared-elements/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('includedContent').innerHTML = data;
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+
+        menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        });
+
+    
+        dropdowns.forEach(dropdown => {
+        dropdown.querySelector('a').addEventListener('click', e => {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+        });
+
+        document.getElementById("Login-btn").addEventListener("click", signIn)
+    });
+    })
+    .catch(error => console.error('Error loading HTML:', error));
+
+    
+  
+
+
+    
+    function signIn() {
         //check if user is signed in
         if (auth.currentUser != null) {
             //sign out
@@ -57,7 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const credential = GoogleAuthProvider.credentialFromError(error);
             })
         }
-    })
+    }
+
 
     onAuthStateChanged(auth, async user => {
         // checking for change of state in authentication(signed in or not)
