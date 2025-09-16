@@ -70,6 +70,18 @@
         border-top: 1px solid #ccc;
         width: 80%;
     }
+
+    .nav-links button {
+        background-color: rgb(0, 46, 252);
+        color: white;
+        border-radius: 5px;
+        transition: 0.3s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        border-width: thin;
+        border-style: solid;
+        padding: 0.5rem 1rem;
+        width: 5rem;
+    }
     
     /* Responsive Design */
       /* Show hamburger on mobile */
